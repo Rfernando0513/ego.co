@@ -1,0 +1,64 @@
+.Banner {
+  width: 100%;
+  height: 637px;
+  background-color: var(--bg-hero);
+  padding-top: 24px;   /* aproxima do header */
+}
+
+.Banner-container {
+  max-width: var(--container-content);
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Banner-text h1 {
+  font-size: var(--font-lg);
+  line-height: 1.2;
+  color: var(--text-title);
+  margin-bottom: 20px;
+  font-family: var(--font-family-base);
+}
+
+.Banner-text p {
+  font-size: var(--font-md);
+  color: var(--text-body);
+  margin-bottom: 32px;
+  font-family: var(--font-family-base);
+}
+
+.Banner-button {
+  background-color: var(--bg-button-primary);
+  color: var(--text-inverse);
+  border: none;
+  width: var(--btn-primary-width);
+  padding: 22px 40px;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-sm);
+  font-family: var(--font-family-base);
+  cursor: pointer;
+}
+
+.Banner-images {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* tamanho das imagens */
+.img-left {
+  width: 399.81px;
+  height: 599.72px;
+  height: cover;
+  margin-bottom: 200px;
+}
+
+.img-right {
+  width: 342.66px;
+  height: 496.96px;
+  object-fit: auto;
+  margin-top: 200px;
+}

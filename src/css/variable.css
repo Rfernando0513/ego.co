@@ -1,0 +1,22 @@
+:root {
+  /* Backgrounds */
+  --bg-page: #f7f6f2;
+  --bg-hero: #9db7a5;
+  --bg-button-primary: #e37c5b;
+  --bg-button-contact: #93B19D;
+
+  /* Borders */
+  --border-header: #f1a07b;
+
+  /* Text */
+  --text-title: #2F4F3E;
+  --text-subTitleFooter: #5F7F6A;
+  --text-body: #5f6f6c;
+  --text-inverse: #ffffff;
+  
+
+  /* Typography */
+  --font-family-base: 'Poppins', sans-serif ;
+
+  --btn-primary-width: 301px;
+}

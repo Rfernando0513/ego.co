@@ -1,0 +1,7 @@
+@import '../../css/variable.css';
+
+.headerDividder{
+  background-color: var(--border-header);
+  width: 100%;
+  height: 13px;
+}
