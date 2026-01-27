@@ -1,0 +1,5 @@
+.card{
+    max-width: 290px;
+    max-height: 220px;
+    background-color: var(--bg-card);
+}

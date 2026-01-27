@@ -1,9 +1,11 @@
 :root {
   /* Backgrounds */
   --bg-page: #f7f6f2;
+  --bg-default: #F6F5F1;
   --bg-hero: #9db7a5;
   --bg-button-primary: #e37c5b;
   --bg-button-contact: #93B19D;
+  --bg-card: #F3784F;
 
   /* Borders */
   --border-header: #f1a07b;
@@ -13,7 +15,8 @@
   --text-subTitleFooter: #5F7F6A;
   --text-body: #5f6f6c;
   --text-inverse: #ffffff;
-  
+  --text-span-title: #F08A5B;
+  --text-subTitle-service: #5F6F64;
 
   /* Typography */
   --font-family-base: 'Poppins', sans-serif ;

@@ -1,0 +1,26 @@
+.containner-service{
+    max-width: 1120px;
+    height: 688px;
+    margin-top: 22px;
+    margin: 20px auto 75px;
+    text-align: center;
+}
+
+.title-service {
+    color: var(--text-title);
+    font-size: 30px;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+}
+
+.subTitle-service{
+    color: var(--text-subTitle-service);
+    font-size: 20px;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.span-text {
+    color: var(--text-span-title);
+}
