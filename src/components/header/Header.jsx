@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+useEffect(() => {
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  window.addEventListener("scroll", closeMenu);
+
+  return () => {
+    window.removeEventListener("scroll", closeMenu);
+  };
+}, []);
 
   return (
     <header className="navbar">

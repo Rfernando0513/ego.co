@@ -4,6 +4,7 @@
     margin-top: 22px;
     margin: 20px auto 75px;
     text-align: center;
+    padding: 20px 4%;
 }
 
 .title-service {
@@ -23,4 +24,31 @@
 
 .span-text {
     color: var(--text-span-title);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px 120px;
+    margin-top: 65px;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .containner-service{
+        margin-bottom: 40px;
+    }
 }

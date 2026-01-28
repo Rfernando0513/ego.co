@@ -3,8 +3,9 @@
 
   position: relative; /* referência pros triangulos */
   width: 100%;
-  height: 637px;
-  padding-top: 0px;   /* aproxima do header */
+  min-height: 637px;
+  padding-top: 94px;   /* aproxima do header */
+  box-sizing: border-box;
   overflow: visible ; /* corta o excesso certinho igual figma */
 }
 
@@ -23,6 +24,7 @@
   color: var(--text-title);
 
   font-size: 30px;
+  font-weight: 600;
   line-height: 45px;
   margin-top: 126.35px;
   margin-bottom: 20px;
@@ -35,35 +37,47 @@
 
   line-height: 25px;
   font-size: 20px;
+  font-weight: 600;
   margin-bottom: 66.55px;
   margin-left: 121px;
 }
 
+.Banner-button:hover{
+  transform: scale(1.06);
+}
+
+
 .Banner-button {
-  background-color: var(--bg-button-primary);
+  background-color: var(--bg-hero);
   color: var(--text-inverse);
-  width: 329px;
+  width: 301px;
   height: 83.51px;
   font-family: var(--font-family-base);
   
   white-space: nowrap;
   border: none;
-  padding: 22px 40px;
   font-size: 18px;
   cursor: pointer;
   border-radius: 30px;
-  margin-left: 180px;
+  border: 1px solid rgba(5, 5, 5, 0.3);
+  margin-left: 170px;
+
+  box-shadow: 
+    0 2px 0 rgba(255, 255, 255, 0.15),
+    0 6px 12px rgba(255, 255, 255, 0.24);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .Banner-images {
   display: flex;
-  gap: 50px;
+  gap: 5px;
   align-items: center;
 }
 
 /* tamanho das imagens */
 .img-left {
-  width: 421.81px;
+  width: 381.41px;
   height: 421.72px;
   margin-bottom: 170px;
 }
@@ -72,10 +86,19 @@
   width: 342.66px;
   height: 496.96px;
   margin-top: 140px;
+  transform: translateX(26px);
 }
 
 /* BASE DOS TRIÂNGULOS */
-.triangle-top,
+.triangle-top {
+  position: absolute;
+  top: 94px;
+  right: 0;
+  width: 150px;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .triangle-bottom {
   position: absolute;
   pointer-events: none;
@@ -84,14 +107,14 @@
 
 /* TRIÂNGULO DE CIMA */
 .triangle-top {
-  width: 150px;       /* igual figma */
-  top: 0;
-  right: 0;
+  image-rendering: auto;
+  transform: translateZ(0);
 }
+
 
 /* TRIÂNGULO DE BAIXO */
 .triangle-bottom {
-  width: 655px;       /* igual figma */
+  width: 655px;   
   bottom: 0;
   left: 0;
 }
@@ -139,22 +162,34 @@
   }
 
   .Banner-images {
-    margin-top: 40px;
+    position: relative;
+    margin-top: 20px;
     gap: 24px;
   }
 
-  .img-left,
-  .img-right {
-    width: 260px;
+  .img-left{
+    width: 187px;
     height: auto;
-    margin: 0;
+
+    position: relative;
+    top: 70px;
+    right: 90px;
+  }
+  .img-right {
+    width: 156px;
+    height: auto;
+
+    position: absolute; 
+    bottom: -40px; /* empurra pra fora do banner */
+    top: 64px;
+    transform: translateX(83%);
+}
   }
 
   .triangle-top {
-    width: 90px;
+    width: 100px;
   }
 
   .triangle-bottom {
     width: 320px;
   }
-}
