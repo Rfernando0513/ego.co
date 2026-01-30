@@ -3,4 +3,17 @@
 body {
     font-family: var(--font-family-base);
     background-color: var(--bg-default);
+    padding-top: 100px;
+}
+
+:root {
+  --header-height: 80px;
+}
+
+.navbar {
+  height: var(--header-height);
+}
+
+.nav-links {
+  top: var(--header-height);
 }

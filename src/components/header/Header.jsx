@@ -33,7 +33,6 @@ useEffect(() => {
 
         <button className="nav-button">FALE COM A EGO</button>
 
-        {/* BOTÃO HAMBÚRGUER */}
         <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}

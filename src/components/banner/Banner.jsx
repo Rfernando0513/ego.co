@@ -7,7 +7,7 @@ function Banner() {
         <div className="Banner-container">
           <div className="Banner-text">
             <h1>
-              Gestão que nutre <br />
+              Gestão que nutre <br /> 
               Qualidade que transforma.
             </h1>
 
@@ -23,8 +23,8 @@ function Banner() {
 
 
           <div className="Banner-images">
-            <img className="Banner-img img-left" src="/img/mockup-prancheta.png" alt="mockup" />
-            <img className="Banner-img img-right" src="/img/mockup-banner.png" alt="mockup" />
+            <img className="Banner-img img-left" src="/img/mockup-prancheta.png" alt="mulher com a prancheta" />
+            <img className="Banner-img img-right" src="/img/mockup-banner.png" alt="mulher sorrindo com o celular na mão" />
           </div>
 
         </div>

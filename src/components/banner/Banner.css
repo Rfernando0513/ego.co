@@ -1,195 +1,143 @@
 .Banner {
-  background-color: var(--bg-hero);
-
-  position: relative; /* referência pros triangulos */
-  width: 100%;
-  min-height: 637px;
-  padding-top: 94px;   /* aproxima do header */
-  box-sizing: border-box;
-  overflow: visible ; /* corta o excesso certinho igual figma */
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-banner);
+  height: clamp(500px, 100vh, 640px);
 }
 
 .Banner-container {
-  max-width: var(--container-content);
+  position: relative;
+  z-index: 2;
 
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 4%;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.Banner-text {
+  max-width: 520px;
+  margin-top: -300px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Banner-text h1 {
   font-family: var(--font-family-base);
-  color: var(--text-title);
-
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 45px;
-  margin-top: 126.35px;
+  color: #2f4f3e;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.3;
   margin-bottom: 20px;
-  margin-left: 121px;
 }
 
 .Banner-text p {
-  color: var(--text-body);
   font-family: var(--font-family-base);
-
-  line-height: 25px;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 66.55px;
-  margin-left: 121px;
+  color: var(--text-body);
+  font-size: clamp(15px, 2vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
-
-.Banner-button:hover{
-  transform: scale(1.06);
-}
-
 
 .Banner-button {
-  background-color: var(--bg-hero);
-  color: var(--text-inverse);
-  width: 301px;
-  height: 83.51px;
+  background: transparent;
+  color: #2f4f3e;
+  padding: 18px 36px;
+  font-size: 15px;
   font-family: var(--font-family-base);
-  
-  white-space: nowrap;
-  border: none;
-  font-size: 18px;
+  border-radius: 999px;
+  border: 1px solid #2f4f3e;
   cursor: pointer;
-  border-radius: 30px;
-  border: 1px solid rgba(5, 5, 5, 0.3);
-  margin-left: 170px;
+  transition: all 0.25s ease;
+}
 
-  box-shadow: 
-    0 2px 0 rgba(255, 255, 255, 0.15),
-    0 6px 12px rgba(255, 255, 255, 0.24);
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.Banner-button:hover {
+  background-color: #2f4f3e;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .Banner-images {
   display: flex;
-  gap: 5px;
   align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
+  position: relative;
 }
 
-/* tamanho das imagens */
+.Banner-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .img-left {
-  width: 381.41px;
-  height: 421.72px;
-  margin-bottom: 170px;
+  width: clamp(260px, 28vw, 900px);
+  margin-top: -300px;
 }
 
 .img-right {
-  width: 342.66px;
-  height: 496.96px;
-  margin-top: 140px;
-  transform: translateX(26px);
+  width: clamp(220px, 24vw, 500px);
 }
 
-/* BASE DOS TRIÂNGULOS */
 .triangle-top {
-  position: absolute;
-  top: 94px;
-  right: 0;
-  width: 150px;
-  z-index: 1;
-  pointer-events: none;
+  margin-left: 90%;
 }
 
 .triangle-bottom {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
+  margin-top: -300px;
 }
 
-/* TRIÂNGULO DE CIMA */
-.triangle-top {
-  image-rendering: auto;
-  transform: translateZ(0);
-}
-
-
-/* TRIÂNGULO DE BAIXO */
-.triangle-bottom {
-  width: 655px;   
-  bottom: 0;
-  left: 0;
-}
-
-/* conteúdo acima dos triângulos */
-.Banner-container {
-  position: relative;
-  z-index: 2;
-}
-
-/* =========================
-   MOBILE - BANNER
-   ========================= */
-@media (max-width: 768px) {
-
-  .Banner {
-    height: auto;
-    padding-bottom: 60px;
-  }
-
+@media (max-width: 930px) {
   .Banner-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .Banner {
+    overflow: visible;
+    height: 910px;
+  }
+
+  .Banner-text {
+    max-width: 100%;
+    margin-top: -50px;
+  }
+
   .Banner-text h1 {
-    margin-top: 80px;
-    margin-left: 0;
-    font-size: 24px;
-    line-height: 32px;
+    margin-bottom: 0;
   }
 
   .Banner-text p {
-    margin-left: 0;
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .Banner-button {
-    margin-left: 0;
-    width: 100%;
-    max-width: 300px;
+    margin-bottom: 15px;
   }
 
   .Banner-images {
-    position: relative;
-    margin-top: 20px;
-    gap: 24px;
+    justify-content: center;
+    margin-top: 10px;
+    display: block;
   }
 
-  .img-left{
-    width: 187px;
-    height: auto;
-
-    position: relative;
-    top: 70px;
-    right: 90px;
+  .img-left {
+    margin-top: 0;
   }
-  .img-right {
-    width: 156px;
-    height: auto;
 
-    position: absolute; 
-    bottom: -40px; /* empurra pra fora do banner */
-    top: 64px;
-    transform: translateX(83%);
-}
+  .Banner::before {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% 90%,
+        0 100%);
   }
 
   .triangle-top {
-    width: 100px;
+    margin-left: 65%;
   }
 
   .triangle-bottom {
-    width: 320px;
+    padding: 20px 0;
   }
+}
