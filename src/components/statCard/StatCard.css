@@ -1,0 +1,26 @@
+.stat-number {
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-title);
+   white-space: nowrap;
+}
+
+.stat-suffix {
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 15px;
+  opacity: 0.8;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.stat-card{
+    text-align: center;
+    align-items: center;
+    max-height: 150px;
+    margin-left: 10px;
+}
