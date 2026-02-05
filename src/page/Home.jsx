@@ -4,6 +4,7 @@ import FooterFinal from '../components/footer/Footer-final'
 import Dividder from '../components/dividder/Dividder';
 import Service from '../components/service';
 import About from '../components/about';
+import Contact from '../components/contato'
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
             <Banner />
             <Service />
             <About />
+            <Contact />
             <Dividder />
             <FooterFinal />
         </>

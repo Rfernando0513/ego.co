@@ -1,0 +1,21 @@
+.contactSection {
+  padding: 40px 40px;
+  background: #faf9f6;
+}
+
+.contactContainer {
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: flex;          
+  gap: 102px;
+  align-items: flex-start;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

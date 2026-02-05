@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--bg-banner);
-  height: clamp(500px, 100vh, 640px);
+  min-height: clamp(500px, 60vh, 600px);
 }
 
 .Banner-container {
@@ -21,7 +21,7 @@
 
 .Banner-text {
   max-width: 520px;
-  margin-top: -300px;
+  margin-top: -150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,67 +77,67 @@
 
 .img-left {
   width: clamp(260px, 28vw, 900px);
-  margin-top: -300px;
+  margin-top: -100px;
 }
 
 .img-right {
   width: clamp(220px, 24vw, 500px);
+  margin-top: 11%;
 }
 
 .triangle-top {
-  margin-left: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .triangle-bottom {
-  margin-top: -300px;
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
 }
 
 @media (max-width: 930px) {
+  .Banner {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
   .Banner-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .Banner {
-    overflow: visible;
-    height: 910px;
-  }
-
   .Banner-text {
     max-width: 100%;
-    margin-top: -50px;
+    margin-top: 0;
   }
 
   .Banner-text h1 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .Banner-text p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .Banner-images {
     justify-content: center;
-    margin-top: 10px;
-    display: block;
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .img-left {
+  .img-left,
+  .img-right {
     margin-top: 0;
   }
 
-  .Banner::before {
-    clip-path: polygon(0 0,
-        100% 0,
-        100% 90%,
-        0 100%);
-  }
-
   .triangle-top {
-    margin-left: 65%;
+    right: 0;
   }
 
   .triangle-bottom {
-    padding: 20px 0;
+    bottom: -1px;
   }
 }
