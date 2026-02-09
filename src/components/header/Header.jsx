@@ -36,7 +36,7 @@ function Navbar() {
       <div className="navbar-container">
 
         <div className="logo">
-          <a>
+          <a href="/">
             <img src="/img/Logo.png" alt="ego.co" />
           </a>
 
