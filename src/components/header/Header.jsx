@@ -1,35 +1,31 @@
-import { useState, useEffect } from "react";
-import "./Header.css";
+import { useState, useEffect } from "react"
+import "./Header.css"
 
 function Navbar() {
-  const handleScroll = (id, offset = 80) => {
-    const element = document.getElementById(id);
-    if (!element) return;
 
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - offset;
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleScroll = (id, offset = 80) => {
+    const element = document.getElementById(id)
+    if (!element) return
+
+    const elementPosition = element.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - offset
 
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
-    });
+    })
 
-    setMenuOpen(false);
-  };
-
-  const [menuOpen, setMenuOpen] = useState(false);
+    setMenuOpen(false)
+  }
 
   useEffect(() => {
-    const closeMenu = () => {
-      setMenuOpen(false);
-    };
+    const closeMenu = () => setMenuOpen(false)
+    window.addEventListener("scroll", closeMenu)
 
-    window.addEventListener("scroll", closeMenu);
-
-    return () => {
-      window.removeEventListener("scroll", closeMenu);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", closeMenu)
+  }, [])
 
   return (
     <header className="navbar">
@@ -39,7 +35,6 @@ function Navbar() {
           <a href="/">
             <img src="/img/Logo.png" alt="ego.co" />
           </a>
-
         </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
@@ -58,7 +53,6 @@ function Navbar() {
           FALE COM A EGO
         </a>
 
-
         <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -68,7 +62,7 @@ function Navbar() {
 
       </div>
     </header>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
