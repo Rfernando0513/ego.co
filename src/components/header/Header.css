@@ -61,7 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* ⬅️ garante clique em toda área */
 
   background-color: var(--bg-button-contact);
   color: #ffffff;

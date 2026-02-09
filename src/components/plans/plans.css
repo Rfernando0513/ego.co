@@ -81,7 +81,6 @@ li:last-child {
     background: #EEF2EB;
 }
 
-/* BADGE */
 .badge {
     position: absolute;
     top: -14px;
@@ -94,7 +93,6 @@ li:last-child {
     border-radius: 6px;
 }
 
-/* TEXTOS */
 .plan-card h3 {
     margin-left: 20px;
     font-size: 19px;
@@ -107,7 +105,6 @@ li:last-child {
     margin-left: 20px;
 }
 
-/* CONTEÚDO INTERNO */
 .cardDivissor {
     background-color: #F6F5F1;
     border-radius: 12px;
@@ -184,7 +181,6 @@ li:last-child {
     font-weight: 500;
 }
 
-/* LISTA AVULSOS */
 .services-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,9 +193,6 @@ li:last-child {
     color: var(--text-subTitleFooter);
 }
 
-/* ===========================
-   📱 TABLET (até 1024px)
-=========================== */
 @media (max-width: 1024px) {
     .plans-grid {
         grid-template-columns: 1fr;
