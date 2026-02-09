@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import "./Header.css"
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false)
 
   const handleScroll = (id, offset = 80) => {
@@ -23,14 +22,12 @@ function Navbar() {
   useEffect(() => {
     const closeMenu = () => setMenuOpen(false)
     window.addEventListener("scroll", closeMenu)
-
     return () => window.removeEventListener("scroll", closeMenu)
   }, [])
 
   return (
     <header className="navbar">
       <div className="navbar-container">
-
         <div className="logo">
           <a href="/">
             <img src="/img/Logo.png" alt="ego.co" />
@@ -56,6 +53,7 @@ function Navbar() {
         <button
           className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menu"
         >
           ☰
         </button>
