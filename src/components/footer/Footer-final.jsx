@@ -30,7 +30,6 @@ function FooterFinal() {
   useEffect(() => {
     const closeMenu = () => setMenuOpen(false)
     window.addEventListener("scroll", closeMenu)
-
     return () => window.removeEventListener("scroll", closeMenu)
   }, [])
 
@@ -38,12 +37,13 @@ function FooterFinal() {
     <footer className="footer">
       <div className="footer-container">
 
+        {/* Marca */}
         <div className="footer-brand">
-            <img
-              src="/img/logo-diminuida.png"
-              alt="ego.co"
-              className="footer-logo"
-            />
+          <img
+            src="/img/logo-diminuida.png"
+            alt="ego.co"
+            className="footer-logo"
+          />
           <p>
             Assessoria nutricional e gestão da qualidade,<br />
             promovendo segurança alimentar,<br />
@@ -53,6 +53,7 @@ function FooterFinal() {
 
         <div className="footer-divider"></div>
 
+        {/* Navegação interna */}
         <div className="footer-nav">
           <h4>Navegação</h4>
           <ul>
@@ -65,6 +66,7 @@ function FooterFinal() {
 
         <div className="footer-divider"></div>
 
+        {/* Contato */}
         <div className="footer-contact">
           <h4>Contato</h4>
 
@@ -75,33 +77,17 @@ function FooterFinal() {
 
           <p className="footer-item">
             <Envelope size={20} />
-            <a href="mailto:contato@gestaoego.com.br">
-              contato@gestaoego.com.br
-            </a>
+            <a href="mailto:contato@gestaoego.com.br">contato@gestaoego.com.br</a>
           </p>
 
           <div className="footer-social">
-            <a
-              href="https://wa.me/5511914100225"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://wa.me/5511914100225" target="_blank" rel="noopener noreferrer">
               <Whatsapp size={20} />
             </a>
-
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <Facebook size={20} />
             </a>
-
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <Instagram size={20} />
             </a>
           </div>
@@ -112,8 +98,7 @@ function FooterFinal() {
       <div className="footer-divider-bottom"></div>
 
       <div className="footer-bottom">
-        © 2026 EGO.CO Assessoria Nutricional e Gestão da Qualidade.
-        Todos os direitos reservados.
+        © 2026 EGO.CO Assessoria Nutricional e Gestão da Qualidade. Todos os direitos reservados.
       </div>
     </footer>
   )
