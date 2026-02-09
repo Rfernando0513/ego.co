@@ -1,4 +1,16 @@
 export default function PlanCard({ type, recommended, offset }) {
+
+  const phoneNumber = '5511914100225';
+
+  const messages = {
+    prime: 'Olá! Tenho interesse no plano EGO PRIME – Gestão Completa. Gostaria de mais informações.',
+    core: 'Olá! Tenho interesse no plano EGO CORE – Gestão Intermediária. Gostaria de mais informações.',
+    base: 'Olá! Tenho interesse no plano EGO BASE – Gestão Essencial. Gostaria de mais informações.',
+  };
+
+  const whatsappLink = (message) =>
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <div className={`plan-card ${type} ${offset ? 'offset' : ''}`}>
 
@@ -27,7 +39,13 @@ export default function PlanCard({ type, recommended, offset }) {
               <li>. Análise de potabilidade da água (a cada 06 meses)</li>
             </ul>
 
-            <button>Contratar Gestão Completa</button>
+            <a
+              href={whatsappLink(messages.prime)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Contratar Gestão Completa</button>
+            </a>
           </div>
         </>
       )}
@@ -39,6 +57,7 @@ export default function PlanCard({ type, recommended, offset }) {
             Para estabelecimentos que buscam organização,
             prevenção e suporte técnico periódico.
           </p>
+
           <div className="cardDivissor">
             <strong>Inclui:</strong>
             <ul>
@@ -49,9 +68,14 @@ export default function PlanCard({ type, recommended, offset }) {
               <li>. Manual de Boas Práticas + POPs (renovação anual)</li>
             </ul>
 
-            <button>Contratar Gestão Intermediária</button>
+            <a
+              href={whatsappLink(messages.core)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Contratar Gestão Intermediária</button>
+            </a>
           </div>
-
         </>
       )}
 
@@ -68,16 +92,22 @@ export default function PlanCard({ type, recommended, offset }) {
             <ul>
               <li>. 01 auditoria mensal</li>
               <li>. Treinamento e dinâmica de equipe a cada 06 meses</li>
-              <li>. Gestão da documentação (auditoria trimestral)</li> 
+              <li>. Gestão da documentação (auditoria trimestral)</li>
               <li>. Kit de adesivos informativos (POPs)</li>
               <li>. Planilha de controle</li>
             </ul>
 
-            <button>Contratar Gestão Essencial</button>
+            <a
+              href={whatsappLink(messages.base)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>Contratar Gestão Essencial</button>
+            </a>
           </div>
         </>
       )}
 
     </div>
-  )
+  );
 }
