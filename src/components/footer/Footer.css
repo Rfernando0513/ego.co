@@ -72,20 +72,28 @@
   margin-bottom: 8px;
 }
 
-.footer-nav a {
+.footer-nav button {
+  background: none;
+  border: none;
+
   display: inline-block;
-  text-decoration: none;
+  padding: 0;
+
   color: var(--text-subTitleFooter);
   font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+
   cursor: pointer;
 
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.footer-nav a:hover {
+.footer-nav button:hover {
   color: var(--bg-button-primary);
   transform: scale(1.06);
 }
+
 
 .footer-contact p {
   font-size: 14px;

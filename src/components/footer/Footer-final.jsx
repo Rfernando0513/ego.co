@@ -57,10 +57,10 @@ function FooterFinal() {
                     <div className="footer-nav">
                         <h4>Navegação</h4>
                         <ul>
-                            <li><a onClick={() => handleScroll("inicio", 100)}>Inicio</a></li>
-                            <li><a onClick={() => handleScroll("servicos", 60)}>Serviços</a></li>
-                            <li><a onClick={() => handleScroll("sobre", 150)}>Sobre nós</a></li>
-                            <li><a onClick={() => handleScroll("pacotes", 50)}>Pacotes</a></li>
+                            <li><button onClick={() => handleScroll("inicio", 100)}>Inicio</button></li>
+                            <li><button onClick={() => handleScroll("servicos", 60)}>Serviços</button></li>
+                            <li><button onClick={() => handleScroll("sobre", 150)}>Sobre nós</button></li>
+                            <li><button onClick={() => handleScroll("pacotes", 50)}>Pacotes</button></li>
                         </ul>
                     </div>
 
