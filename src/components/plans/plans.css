@@ -1,0 +1,240 @@
+/* RESET BÁSICO */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* CONTAINER PRINCIPAL */
+.containnerPlans {
+    background-color: #F6F5F1;
+    padding: 80px 20px;
+}
+
+.containnerPlans h1 {
+    text-align: center;
+    color: var(--text-title);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.containnerPlans h4 {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-subTitleFooter);
+}
+
+/* ÁREA DOS PLANOS */
+.plans {
+    max-width: 1366px;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* GRID PRINCIPAL */
+.plans-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* COLUNA DIREITA */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* CARDS SUPERIORES */
+.top-cards {
+    display: flex;
+    gap: 30px;
+}
+
+/* CARD BASE */
+.plan-card {
+    width: 360px;
+    border: 2px solid rgba(47, 79, 62, 0.5);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: start;
+}
+
+/* VARIAÇÕES */
+.plan-card.prime {
+    height: 730px;
+    background: #E8F0EA;
+}
+
+.plan-card.core {
+    height: 612px;
+    background: #F7F4EA;
+}
+
+.plan-card.base {
+    height: 612px;
+    background: #EEF2EB;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    background: #c9a24d;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* TEXTOS */
+.plan-card h3 {
+    margin-left: 20px;
+    font-size: 19px;
+    color: var(--text-title);
+}
+
+.plan-card .descriptionPlans {
+    font-size: 14px;
+    color: var(--text-subTitleFooter);
+    margin-left: 20px;
+}
+
+/* CONTEÚDO INTERNO */
+.cardDivissor {
+    background-color: #F6F5F1;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.plan-card strong {
+    font-size: 18px;
+    color: var(--text-title);
+}
+
+.plan-card li {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-subTitleFooter);
+}
+
+/* BOTÃO */
+.plan-card button {
+    margin-top: auto;
+    height: 44px;
+    background: #2f4f3e;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SERVIÇOS AVULSOS */
+.services-avulsos {
+    width: 800px;
+    height: 190px;
+    background: #E8F0EA;
+    border: 2px solid rgba(47, 79, 62, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.services-avulsos h4 {
+    margin: 0 0 8px;
+    color: var(--text-title);
+    font-weight: 600;
+}
+
+.services-avulsos p {
+    font-size: 13px;
+    color: var(--text-subTitleFooter);
+    font-weight: 500;
+}
+
+/* LISTA AVULSOS */
+.services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 180px;
+}
+
+.services-avulsos li {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-subTitleFooter);
+}
+
+/* ===========================
+   📱 TABLET (até 1024px)
+=========================== */
+@media (max-width: 1024px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-cards {
+        flex-direction: column;
+    }
+
+    .plan-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-avulsos {
+        width: 100%;
+        height: auto;
+    }
+
+    .services-list {
+        column-gap: 80px;
+    }
+}
+
+/* ===========================
+   📱 MOBILE (até 768px)
+=========================== */
+@media (max-width: 768px) {
+    .containnerPlans h1 {
+        font-size: 28px;
+    }
+
+    .plans {
+        margin-top: 40px;
+    }
+
+    .plan-card {
+        width: 100%;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
+    .services-avulsos {
+        padding: 16px;
+    }
+}

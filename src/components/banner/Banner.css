@@ -53,6 +53,8 @@
   border: 1px solid #2f4f3e;
   cursor: pointer;
   transition: all 0.25s ease;
+  text-decoration: none; 
+  display: inline-flex; 
 }
 
 .Banner-button:hover {
@@ -93,12 +95,42 @@
 
 .triangle-bottom {
   position: absolute;
-  bottom: -120px;
+  bottom: -180px;
   left: 0;
   width: 100%;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 900px) {
+  .Banner {
+    height: auto;
+    min-height: unset;
+    padding: 40px 0 60px;
+  }
+
+  .Banner-container {
+    align-items: flex-start;
+  }
+
+  .Banner-text {
+    margin-top: 0;
+    align-items: start;
+  }
+
+  .Banner-images {
+    justify-content: end;
+    left: 2;
+  }
+
+  .img-right {
+    margin-top: 0;
+  }
+
+  .triangle-bottom {
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 420px) {
   .Banner {
     min-height: auto;
     padding-bottom: 0;
@@ -112,6 +144,7 @@
   .Banner-text {
     max-width: 100%;
     margin-top: 0;
+    align-items: center;
   }
 
   .Banner-text h1 {

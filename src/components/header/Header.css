@@ -22,7 +22,7 @@
 }
 
 .logo {
-  flex: 1;  
+  flex: 1;
 }
 
 .logo img {
@@ -60,6 +60,8 @@
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  /* ⬅️ garante clique em toda área */
 
   background-color: var(--bg-button-contact);
   color: #ffffff;
@@ -72,13 +74,13 @@
   border-radius: 999px;
 
   cursor: pointer;
+  text-decoration: none;
 
-  box-shadow: 
+  box-shadow:
     0 2px 0 rgba(0, 0, 0, 0.15),
     0 6px 12px rgba(0, 0, 0, 0.15);
 
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-
 }
 
 .nav-button:hover {

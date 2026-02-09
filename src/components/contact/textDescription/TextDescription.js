@@ -1,8 +1,24 @@
 import "./TextDescription.css";
-import whatsappIcon from "../../imgs/whatsapp.svg";
-import checkIcon from "../../imgs/check.png";
+import {
+  Whatsapp,
+  Check
+} from 'react-bootstrap-icons'
 
 export default function TextDescription() {
+  const handleWhatsAppClick = () => {
+    const numero = "5511914100225";
+
+    const mensagem = `
+Olá! Vim pelo site da EGO.CO
+
+Gostaria de entender melhor as soluções de segurança para o meu estabelecimento.
+  `;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+  };
+
+
   return (
     <aside className="contactInfoCard">
       <h3 className="contactInfoTitle">
@@ -20,22 +36,26 @@ export default function TextDescription() {
       </p>
 
       <div className="contactInfoInnerCard">
-        <button className="contactInfoWhatsBtn" type="button">
-          <img src={whatsappIcon} alt="" className="whatsIcon" />
+        <button
+          className="contactInfoWhatsBtn"
+          type="button"
+          onClick={handleWhatsAppClick}
+        >
+          <Whatsapp size={35}/>
           Falar agora pelo WhatsApp
         </button>
 
         <ul className="contactInfoList">
           <li>
-            <img src={checkIcon} alt="" className="checkIcon" />
+            <Check size={40}/>
             Atendimento profissional
           </li>
           <li>
-            <img src={checkIcon} alt="" className="checkIcon" />
+            <Check size={40}/>
             Resposta rápida
           </li>
-          <li>
-            <img src={checkIcon} alt="" className="checkIcon" />
+          <li>  
+            <Check size={40}/>  
             Sem compromisso
           </li>
         </ul>

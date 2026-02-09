@@ -17,3 +17,7 @@ body {
 .nav-links {
   top: var(--header-height);
 }
+
+html {
+  scroll-behavior: smooth;
+}
