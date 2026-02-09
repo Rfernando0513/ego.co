@@ -43,10 +43,10 @@ function Navbar() {
         </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a onClick={() => handleScroll("inicio", 100)}>INÍCIO</a>
-          <a onClick={() => handleScroll("servicos", 60)}>SERVIÇOS</a>
-          <a onClick={() => handleScroll("sobre", 150)}>SOBRE NÓS</a>
-          <a onClick={() => handleScroll("pacotes", 50)}>PACOTES</a>
+          <button onClick={() => handleScroll("inicio", 100)}>INÍCIO</button>
+          <button onClick={() => handleScroll("servicos", 60)}>SERVIÇOS</button>
+          <button onClick={() => handleScroll("sobre", 150)}>SOBRE NÓS</button>
+          <button onClick={() => handleScroll("pacotes", 50)}>PACOTES</button>
         </nav>
 
         <a
