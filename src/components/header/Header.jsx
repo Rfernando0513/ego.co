@@ -29,9 +29,7 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar-container">
         <div className="logo">
-          <a href="/">
             <img src="/img/Logo.png" alt="ego.co" />
-          </a>
         </div>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>

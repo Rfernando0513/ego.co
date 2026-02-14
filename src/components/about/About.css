@@ -63,6 +63,25 @@
     padding: 12px 16px;
 }
 
+.from-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.from-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.from-left.show,
+.from-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 @media (max-width: 768px) {
 
     .about {

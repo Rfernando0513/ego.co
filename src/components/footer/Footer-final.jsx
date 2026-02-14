@@ -37,7 +37,6 @@ function FooterFinal() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* Marca */}
         <div className="footer-brand">
           <img
             src="/img/logo-diminuida.png"
@@ -53,8 +52,7 @@ function FooterFinal() {
 
         <div className="footer-divider"></div>
 
-        {/* Navegação interna */}
-        <div className="footer-nav">
+          <div className="footer-nav">
           <h4>Navegação</h4>
           <ul>
             <li><button onClick={() => handleScroll("inicio", 100)}>Início</button></li>
@@ -65,8 +63,7 @@ function FooterFinal() {
         </div>
 
         <div className="footer-divider"></div>
-
-        {/* Contato */}
+        
         <div className="footer-contact">
           <h4>Contato</h4>
 
@@ -87,7 +84,7 @@ function FooterFinal() {
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <Facebook size={20} />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/gestaoego.co/" target="_blank" rel="noopener noreferrer">
               <Instagram size={20} />
             </a>
           </div>

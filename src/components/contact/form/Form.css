@@ -133,6 +133,7 @@ form button:hover {
 @media (max-width: 480px) {
     .Form {
         padding: 16px 12px;
+        margin: 0 auto;
     }
 
     form {
