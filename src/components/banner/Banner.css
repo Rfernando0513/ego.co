@@ -130,7 +130,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 440px) {
   .Banner {
     min-height: auto;
     padding-bottom: 0;
